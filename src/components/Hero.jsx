@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-background" aria-label="Welcome banner">
       <div className="absolute inset-0">
         <img
-          src="/garden-background-lush-leaves-subtle.svg"
+          src="../../public/garden-background-lush-leaves-subtle.jpg"
           alt="Lush green garden background"
           className="h-full w-full object-cover"
         />

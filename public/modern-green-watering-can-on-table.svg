@@ -1,8 +1,0 @@
-<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="400" height="300" fill="#FFFFFF"/>
-<rect x="10" y="200" width="380" height="80" fill="#E5E7EB"/>
-<path d="M150 200L150 120L180 120L180 200L150 200Z" fill="#4caf50"/>
-<path d="M150 120L150 100L180 100L180 120L150 120Z" fill="#4caf50"/>
-<path d="M165 100L165 80L170 80L170 100L165 100Z" fill="#4CAF50"/>
-<text x="200" y="250" text-anchor="middle" fill="#4CAF50" font-family="Arial" font-size="16" font-weight="bold">Watering Can</text>
-</svg>
