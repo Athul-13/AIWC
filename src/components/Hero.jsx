@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-background" aria-label="Welcome banner">
       <div className="absolute inset-0">
         <img
-          src="/garden-background-lush-leaves-subtle.jpg"
+          src="/garden-background-lush-leaves-subtle.svg"
           alt="Lush green garden background"
           className="h-full w-full object-cover"
         />
@@ -20,12 +20,12 @@ export default function Hero() {
           Explore a Variety of Products for Your Garden &amp; Beyond.
         </p>
         <div className="mt-8">
-          <Link
+          <a
             href="#featured"
             className="btn-primary inline-flex items-center justify-center rounded-md px-5 py-3 text-base font-semibold shadow transition-all hover:shadow-md"
           >
             Shop Now
-          </Link>
+          </a>
         </div>
 
         {/* Subtle animated accent stripe like a modern, slightly flashy touch */}

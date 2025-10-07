@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -12,7 +10,7 @@ export default function Navbar() {
     <header className="fixed top-0 inset-x-0 z-50 bg-background/90 backdrop-blur border-b border-border">
       <nav className="mx-auto max-w-6xl px-4 md:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2 group" aria-label="AIWC Store Home">
+          <Link to="/" className="flex items-center gap-2 group" aria-label="AIWC Store Home">
             <div
               className="h-8 w-8 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:scale-105 transition-transform"
               aria-hidden="true"
@@ -34,53 +32,50 @@ export default function Navbar() {
         </button>
 
         <div className="hidden md:flex items-center gap-6">
-          <Link href="/" className={navLink}>
+          <Link to="/" className={navLink}>
             Home
           </Link>
-          <Link href="/" className={navLink}>
+          <Link to="/shop" className={navLink}>
             Shop
           </Link>
-          <Link href="/" className={navLink}>
+          <Link to="/about" className={navLink}>
             About
           </Link>
-          <Link href="/" className={navLink}>
+          <Link to="/services" className={navLink}>
             Services
           </Link>
-          <Link href="/" className={navLink}>
+          <Link to="/contact" className={navLink}>
             Contact
           </Link>
-        <Link
-        to="/"   // React Router uses `to` instead of `href`
-        className={
-            "btn-primary rounded-md px-3 py-2 text-sm font-medium shadow-sm " +
-            "hover:shadow md:ml-2 transition-all"
-        }
-        >
-        View Cart
-        </Link>
+          <Link
+            to="/cart"
+            className="btn-primary rounded-md px-3 py-2 text-sm font-medium shadow-sm hover:shadow md:ml-2 transition-all"
+          >
+            View Cart
+          </Link>
         </div>
       </nav>
 
       {open && (
         <div className="md:hidden border-t border-border bg-background">
           <div className="px-4 py-3 flex flex-col gap-3">
-            <Link href="/" className={navLink} onClick={() => setOpen(false)}>
+            <Link to="/" className={navLink} onClick={() => setOpen(false)}>
               Home
             </Link>
-            <Link href="/" className={navLink} onClick={() => setOpen(false)}>
+            <Link to="/shop" className={navLink} onClick={() => setOpen(false)}>
               Shop
             </Link>
-            <Link href="/" className={navLink} onClick={() => setOpen(false)}>
+            <Link to="/about" className={navLink} onClick={() => setOpen(false)}>
               About
             </Link>
-            <Link href="/" className={navLink} onClick={() => setOpen(false)}>
+            <Link to="/services" className={navLink} onClick={() => setOpen(false)}>
               Services
             </Link>
-            <Link href="/" className={navLink} onClick={() => setOpen(false)}>
+            <Link to="/contact" className={navLink} onClick={() => setOpen(false)}>
               Contact
             </Link>
             <Link
-              href="/"
+              to="/cart"
               className="btn-primary rounded-md px-3 py-2 text-sm font-medium shadow-sm w-fit"
               onClick={() => setOpen(false)}
             >

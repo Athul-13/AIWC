@@ -1,13 +1,12 @@
-"use client"
-
 import { useMemo, useState } from "react"
 import { products } from "./products"
 import Navbar from "./components/Navbar"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import Footer from "./components/Footer"
 
-export default function ProductDetailsPage({ params }) {
-  const product = useMemo(() => products.find((p) => p.id === params.id), [params.id])
+export default function ProductDetailsPage() {
+  const { id } = useParams()
+  const product = useMemo(() => products.find((p) => p.id === id), [id])
   const [qty, setQty] = useState(1)
   const [adding, setAdding] = useState(false)
 
@@ -17,7 +16,7 @@ export default function ProductDetailsPage({ params }) {
         <Navbar />
         <div className="mx-auto max-w-3xl px-4 md:px-6 pt-28 pb-20">
           <p className="text-foreground">Product not found.</p>
-          <Link href="/" className="btn-primary inline-block mt-4 rounded-md px-4 py-2">
+          <Link to="/" className="btn-primary inline-block mt-4 rounded-md px-4 py-2">
             Back to Home
           </Link>
         </div>
@@ -79,7 +78,7 @@ export default function ProductDetailsPage({ params }) {
               >
                 {adding ? "Adding…" : "Add to Cart"}
               </button>
-              <Link href="/" className="text-foreground/80 hover:text-foreground text-sm">
+              <Link to="/" className="text-foreground/80 hover:text-foreground text-sm">
                 Continue Shopping
               </Link>
             </div>
@@ -92,7 +91,7 @@ export default function ProductDetailsPage({ params }) {
             {related.map((p) => (
               <Link
                 key={p.id}
-                href={`/product/${p.id}`}
+                to={`/product/${p.id}`}
                 className="group block rounded-lg border border-border bg-card p-3 hover:shadow-md transition-all hover:-translate-y-0.5"
                 aria-label={`View ${p.name}`}
               >

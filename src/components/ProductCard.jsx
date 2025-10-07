@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -15,7 +13,7 @@ export default function ProductCard({ product }) {
 
   return (
     <Link
-      href={`/product/${product.id}`}
+      to={`/product/${product.id}`}
       className="group block rounded-lg border border-border bg-card p-3 hover:shadow-md transition-all hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--ring)]"
       aria-label={`${product.name} details`}
     >
